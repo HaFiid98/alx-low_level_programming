@@ -1,1 +1,1 @@
-this repo is for learning programing first steps
+This folder is for learning c argument if else and while
