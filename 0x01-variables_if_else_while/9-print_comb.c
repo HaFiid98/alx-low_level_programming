@@ -5,7 +5,7 @@
  * main - The entry point of my program
  *
  * Description: The program prints all single digit numbers
- * of base 10 starting from 0, followed by a new line.
+ * of base 10 separated by , . followed by a space.
  *
  * Return: Return O if there is no error in main program
  */
@@ -16,6 +16,11 @@ int main(void)
 	for (n = '0'; n <= '9'; n++)
 	{
 		putchar((char) n);
+		if (n != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 
