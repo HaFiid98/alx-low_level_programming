@@ -1,39 +1,34 @@
-#include<stdio.h>
-
+#include <stdio.h>
 
 /**
- * main - This algorithm print the combination of 3 numbers without 
- * printing dublicates of the same number or even with piveotation
- * like 01 and 10
- * Describtion print combination of 3 numbers
- * Return :0
+ *main - Prints combinations of decimal digits using only putchar
+ *
+ *Description: Prints combinations of decimal digits using only putchar
+ *Return: 0
  */
+int main(void)
+{
+	int digit_one = 0;
+	int digit_two = 0;
+	int digit_three = 0;
 
-int main(void) 
-{ 
-	int first;
-	int second;
-  int third;
-
-	for (first = 48; first <= 57; first++)
-	{ 
-		for (second=first + 1; second <= 57; second++)
+	for (digit_one = 48; digit_one <= 57; digit_one++)
+	{
+		for (digit_two = digit_one + 1; digit_two <= 57; digit_two++)
 		{
-			for (third = second+1; third <= 57; third++)
+			for (digit_three = digit_two + 1; digit_three <= 57; digit_three++)
 			{
-				putchar(first);
-				putchar(second);
-				putchar(third);
-
-				if (!(first == 55 && second == 56 && third == 57))
+				putchar(digit_one);
+				putchar(digit_two);
+				putchar(digit_three);
+				if (!((digit_one == 55 && digit_two == 56) && digit_three == 57))
 				{
 					putchar(',');
-				        putchar(' ');
+					putchar(' ');
 				}
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
-	
-}			
+
