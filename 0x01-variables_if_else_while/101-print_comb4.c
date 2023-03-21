@@ -1,22 +1,23 @@
 #include<stdio.h>
 
 
-/*main - This algorithm print the combination of 3 numbers without 
+/**
+ * main - This algorithm print the combination of 3 numbers without 
  * printing dublicates of the same number or even with piveotation
  * like 01 and 10
  * Describtion print combination of 3 numbers
  * Return :0
- * */
+ */
 
 int main(void) 
 { 
 	int first;
 	int second;
-	int third;
+  int third;
 
 	for (first = 48; first <= 57; first++)
 	{ 
-		for (second=first+1;second<=57;second++)
+		for (second=first + 1; second <= 57; second++)
 		{
 			for (third = second+1; third <= 57; third++)
 			{
