@@ -1,18 +1,23 @@
-#include<stdio.h>
-#include<main.h>
-/* -main prints _putchar, followed by a new line
- * Description : prints _putchar, followed by a new line
- * return : 0
+#include "main.h"
+/**
+ * main - The entry point of my program
+ *
+ * Description: The program prints _putchar
+ * followed by a new line.
+ *
+ * Return: Return O if there is no error in main program
  */
 int main(void)
 {
-	int i;
-	char pt[8]="-putchar";
-	for (i=0 ; i <=8 ; i++ )
+	int n = 0;
+	char pt[15] = "_putchar";
+
+	while (pt[n] != '\0')
 	{
-		if( pt[i] != '\0' )
-		putchar(pt[i]);
+		_putchar(pt[n]);
+		n++;
 	}
-	putchar('\n');
-	return(0);
+	_putchar('\n');
+
+	return (0);
 }
