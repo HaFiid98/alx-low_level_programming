@@ -1,9 +1,12 @@
 #include<stdio.h>
 
 
-/*This algorithm print the combination of 3 numbers without 
+/*main - This algorithm print the combination of 3 numbers without 
  * printing dublicates of the same number or even with piveotation
- * like 01 and 10 */
+ * like 01 and 10
+ * Describtion print combination of 3 numbers
+ * Return :0
+ * */
 
 int main(void) 
 { 
