@@ -1,5 +1,4 @@
-#include <ctype.h>
-#include "main.h"
+#include"main.h"
 /**
  * _isalpha - A function that checks for alphabetic character.
  *
@@ -7,10 +6,23 @@
  *
  * Return: 1 if @c is alphabetic otherwise 0
  */
-int _isalpha(int c)
+int print_sign(int n)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	if (n > 0)
+	{	
+		_putchar('+');
 		return (1);
+	}
+	else if	(n < 0)
+	{
+		_putchar('-');
+		return (-1);
+	}
 	else
+	{
+		_putchar('0');
 		return (0);
-}
+	}
+	
+	
+}	
