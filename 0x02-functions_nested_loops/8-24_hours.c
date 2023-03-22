@@ -14,6 +14,7 @@ void jack_bauer(void)
 	int hour;
 	int hours;
 	int compt = 57;
+
 	for (hour = 48 ; hour < 51 ; hour++)
 	{
 		if (hour == 50)
@@ -29,7 +30,7 @@ void jack_bauer(void)
 							_putchar(hour);
 							_putchar(hours);
 							_putchar(':');
-						       	_putchar(minute);
+							_putchar(minute);
 							_putchar(minutes);
 							_putchar('\n');
 						}
