@@ -1,14 +1,13 @@
 #include"main.h"
-/**
- * print-sign - A function that print the sign of a number
+ /**
+ * print_sign - A function that prints the sign of a number.
  *
- * @n: is the number whom check their sign
- * Description : function that prints the sign of a number
- * Return: 1 if @n is greater than zero; 0 and prints 0 if n is zero; -1 and prints - if n is less than zero
+ * @n: is the number to print is sign
+ *
+ * Return: 1 if @n is positive, 0 if zero and -1 if negative
  */
-int print_sign(int n)
 {
-	if (n > 0)
+if (n > 0)
 	{
 		_putchar('+');
 		return (1);
