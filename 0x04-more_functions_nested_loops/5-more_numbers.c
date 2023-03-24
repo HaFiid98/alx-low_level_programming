@@ -13,10 +13,10 @@ void more_numbers(void)
 	int b,x,t;
 
 for (t = 48; t <= 57; t++)
-{
-	b = 48;
-	x = 0;
-	c = 57;
+	{
+		b = 48;
+		x = 0;
+		c = 57;
 	while (x < 2)
 	{
 	for (i = 48; i <= c; i++)
@@ -31,7 +31,6 @@ for (t = 48; t <= 57; t++)
 			b = 49;
 		}
 		_putchar(i);
-		
 	}
 		x++;
 }
