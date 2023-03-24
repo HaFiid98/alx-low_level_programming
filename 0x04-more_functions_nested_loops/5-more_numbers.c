@@ -12,14 +12,14 @@ void more_numbers(void)
 	int c;
 	int b,x,t;
 
-for (t = 48 ; t <= 57 ; t++)
+for (t = 48; t <= 57; t++)
 {
 	b = 48;
 	x = 0;
 	c = 57;
 	while (x < 2)
 	{
-	for (i = 48 ;i <= c ; i++)
+	for (i = 48; i <= c; i++)
 	{
 		if (b == 49)
 		{ 
