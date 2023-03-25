@@ -1,41 +1,27 @@
-#include"main.h"
-#include<stdio.h>
+#include <stdio.h>
 /**
- *FizzBuzz - A function who print from 1 to 100
+ * main  - the entry point
  *
- * Description - deosnt return anything
- *
- * Return: Does not return anything
+ * Return: 0 if the program run with success
  */
-
-/*void FizzBuzz(void)*/
 int main(void)
 {
-	int i;
+	int a = 0, b = 0, c = 0;
 
-	for (i = 1; i <= 100; i++)
+	for (a = 1; a < 101; a++)
 	{
-		if (((i % 3) == 0) && ((i % 5) == 0))
-		{
+		b = a % 3;
+		c = a % 5;
+		if (b == 0 && c == 0)
 			printf("FizzBuzz");
-			putchar(' ');
-		}
-		else if ((i % 5) == 0)
-		{
+		else if (c == 0 && b != 0)
 			printf("Buzz");
-			putchar(' ');
-		}
-		else if ((i % 3) == 0)
-		{
+		else if (b == 0 && c != 0)
 			printf("Fizz");
-			putchar(' ');
-		}
 		else
-		{
-			printf("%d",i);
+			printf("%d", a);
+		if (a < 100)
 			putchar(' ');
-		}
 	}
+	putchar('\n');
 	return (0);
-}
-
