@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * print_diagonal - A function who print diagonal line n times
  *
