@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * print_line - A function who diagonal lines n times
+ * print_diagonal - A function who diagonal lines n times
  *
  * @n: number of times to print line
  *
@@ -8,11 +8,11 @@
  */
 void print_diagonal(int n)
 {
-	int i,j;
+	int i, j;
 
 	if (n > 0)
 	{
-		for (i = 0; i < n ;i++)
+		for (i = 0; i < n; i++)
 		{
 			if (i >= 1)
 			{
@@ -25,8 +25,6 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	else 
-	{
+	else
 	       	_putchar('\n');
-	}
 }
