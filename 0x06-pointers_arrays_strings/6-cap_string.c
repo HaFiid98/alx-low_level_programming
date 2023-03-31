@@ -1,31 +1,33 @@
-#include"main.h"
+#include "main.h"
 /**
- * cap_string - function that capitalizes all words of a string.
- *
- * @s : the string
- *
- * Return: s
- *
+ * cap_string - capitalizes all words of a string
+ * @str: string to change
+ * Return: string changed
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int i = 0;
-	int b;
+	int i = 0, j = 0, tmp = 0;
+	char sep[] = {'\n', ' ', '\t', ',', ';', '"',
+		      '(', ')', '{', '}', '?', '!', '.'};
 
-	while (s[i])
+	while (str[i] != '\0')
 	{
-		if ((s[i] >= 96) && (s[i] <= 122))
+		tmp = 0;
+		for (j = 0; sep[j] != '\0' && i != 0; j++)
 		{
-			b = i - 1;
-			if ((s[b] == ' ') || (s[b] == '.') || (s[b] == '	') ||
-					(s[b] == ';') || (s[b] == ',') || (s[b] == '!') ||
-					(s[b] == '?') || (s[b] == '(') || (s[b] == ')') ||
-					(s[b] == '}') || (s[b] == '{') || (s[b] == '"') || (s[b] == '\n'))
+			if (str[i - 1] == sep[j])
 			{
-				s[i] = s[i] - 32;
+				tmp = 1;
+				break;
 			}
+		}
+		if (i == 0 || tmp == 1)
+		{
+			if (str[i] > 96 && str[i] < 123)
+				str[i] -= 32;
 		}
 		i++;
 	}
-	return (s);
+
+	return (str);
 }
