@@ -1,31 +1,29 @@
-#include"main.h"
+#include "main.h"
+
 /**
- * rot13 - function that replace letter with its 13 after
+ * rot13 - encodes a string in rot13
+ * @s: string to be encoded
  *
- * @s : is the sttrong
- *
- * Return: return s
+ * Return: the resulting string
  */
 char *rot13(char *s)
 {
-	int i = 0;
+	int i, j;
 
-	while (s[i])
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (((s[i] >= 97) && (s[i] <= 122)) || ((s[i] >= 65) && (s[i] <= 90)))
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			if (((s[i] >= 97) && (s[i] <= 109)) || ((s[i] >= 65) && (s[i] <= 77)))
+			if (s[i] == a[j])
 			{
-				s[i] = s[i] + 13;
-				break;
-			}
-			else
-			{
-				s[i] = s[i] - 13;
+				s[i] = b[j];
 				break;
 			}
 		}
-		i++;
 	}
+
 	return (s);
 }

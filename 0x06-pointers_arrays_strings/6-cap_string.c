@@ -1,4 +1,4 @@
-#include "main.h"
+#include "mai.h"
 /**
  * cap_string - capitalizes all words of a string
  * @str: string to change
