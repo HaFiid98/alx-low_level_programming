@@ -4,6 +4,7 @@
  *
  * @dest : copy to
  * @src : copy from
+ * @n : number of bytes
  *
  * Return: dest
  */
