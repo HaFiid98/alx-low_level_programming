@@ -4,7 +4,7 @@
  *
  * @n : the number
  *
- * Retrun: 0 is 1
+ * Return: 0 is 1
  */
 int factorial(int n)
 {
