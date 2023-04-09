@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+/**
+ * main - mitply two
+ *
+ * @argc : uknow
+ * @argv : ukonw
+ *
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	int mul;
+
+	if (argc > 1)
+	{
+		printf("Error");
+		return (0);
+	}
+	mul = atoi(argv[0] * argv[1]);
+	printf("%d\n", mul);
+}
