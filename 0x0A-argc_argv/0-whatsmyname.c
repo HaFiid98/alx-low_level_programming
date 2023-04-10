@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdio.h>
 /**
  * main - print the name of the prog
  *
@@ -9,7 +10,6 @@
  */
 int main(int argc, char* argv[])
 {
-	_putchar(*argv[argc - 1]);
-	_putchar('\n');
+	printf("%s\n", argv[argc - 1]);
 	return (0);
 }
