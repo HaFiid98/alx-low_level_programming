@@ -1,60 +1,34 @@
-#include"main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - print the add of numbers
+ * main - Prints the addition of positive numbers,
+ *        followed by a new line.
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * @argc : ll
- *
- * @argv : uk
- *
- * Return: 0 or 1
+ * Return: If one of the numbers contains symbols that are non-digits - 1.
+ *         Otherwise - 0.
  */
 int main(int argc, char *argv[])
 {
-	int a = 0;
-	int i, j;
-	int b = 0;
+	int num, digit, sum = 0;
 
-	if (argc <= 1)
+	for (num = 1; num < argc; num++)
 	{
-		printf("0\n");
-	}
-	for (j = 1; j < argc; j++)
-	{
-		if (!((*argv[j] >= 48) && (*argv[j] <= 57)))
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+
+		sum += atoi(argv[num]);
 	}
-	for (i = 1; i < argc; i++)
-	{
-		if (*argv[i] != ' ')
-		{
-			a +=  _atoi(argv[i]);
-			b = 1;
-		}
-	}
-	if (b)
-	{
-		printf("%d\n", a);
-	}
+
+	printf("%d\n", sum);
+
 	return (0);
-}
-/**
- * _atoi - convert from char to int
- *
- * @s : input
- *
- * Return: res
- */
-int _atoi(char *s)
-{
-		int i = 0;
-
-		while (*s != '\0')
-		{
-			i = i * 10 + *s - '0';
-			s++;
-		}
-		return (i);
 }
