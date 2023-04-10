@@ -12,11 +12,12 @@ int main(int argc, char *argv[])
 {
 	int a = 0;
 	int i, j;
+	int b = 0;
 
 	if (argc == 1)
 	{
-		return (0);
-		printf("\n");
+		printf("0\n");
+		
 	}
 	for (j = 1; j < argc; j++)
 	{
@@ -31,9 +32,13 @@ int main(int argc, char *argv[])
 		if (*argv[i] != ' ')
 		{
 			a +=  _atoi(argv[i]);
+			b = 1;
 		}
 	}
-	printf("%d\n", a);
+	if (b)
+	{
+		printf("%d\n", a);
+	}
 	return (0);
 }
 /**
