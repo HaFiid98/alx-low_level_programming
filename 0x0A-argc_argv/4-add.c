@@ -1,5 +1,4 @@
 #include"main.h"
-#include"stdio.h"
 /**
  * main - print the add of numbers
  *
@@ -14,10 +13,9 @@ int main(int argc, char *argv[])
 	int i, j;
 	int b = 0;
 
-	if (argc == 1)
+	if (argc <= 1)
 	{
 		printf("0\n");
-		
 	}
 	for (j = 1; j < argc; j++)
 	{
@@ -58,4 +56,4 @@ int _atoi(char *s)
 			s++;
 		}
 		return (i);
-	}
+}
