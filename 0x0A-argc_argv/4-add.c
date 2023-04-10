@@ -6,7 +6,7 @@
  *
  * @argv : uk
  *
- * Return: 0
+ * Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
