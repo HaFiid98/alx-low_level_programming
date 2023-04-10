@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, i, b = 0;
+	int a, i = 0;
 
 	if (argc != 2)
 	{
@@ -18,13 +18,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	a = atoi(argv[1]);
-	if (a < 0)
-	{
-		printf("0\n");
-	}
 	while (a > 0)
 	{
-		b = 1;
 		while (a >= 25)
 		{
 			a = a - 25;
@@ -51,7 +46,6 @@ int main(int argc, char *argv[])
 			a--;
 		}
 	}
-	if (b)
-		printf("%d\n", i);
+	printf("%d\n", i);
 	return (0);
 }
