@@ -6,26 +6,24 @@
  * *create_array -  creates an array of chars
  *
  * @size : size
- * @char : the char
+ * @c : the char
  *
  * Return: 0 or 1
  */
 char *create_array(unsigned int size, char c)
 {
-	char *b = malloc(size * sizeof(char*));
-	int i = 0;
+	char *b = malloc(size * sizeof(c));
+	unsigned int i = 0;
+
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	else
-	{
-		while (*b)
+		while (i < size)
 		{
-			b[i+1] = c;
+			b[i] = c;
 			i++;
 		}
-	}
 	return (b);
 }
