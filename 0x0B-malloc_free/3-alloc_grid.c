@@ -6,28 +6,37 @@
  * **alloc_grid - prints a grid of integers
  * @width: width of the grid
  *
- * @height: height of the grid
- *
+ * @height: height of the grid *
  * Return: null if failure
  */
 int **alloc_grid(int width, int height)
 {
 	int k;
+	int z;
 	int i;
 	int j;
 	int **m = (int **)malloc(sizeof(int *) * width);
 	
-	if ((width == 0) && (height == 0))
-		{
-			return (NULL);
-		}
+	if (m == NULL)
+	{
+		return (0);
+	}
+	if ((width <= 0) && (height <= 0))
+	{
+		return (NULL);
+	}
 	for (k = 0; k < width; k++)
 	{
 		m[k] = (int *)malloc(sizeof(int) * height);
-	}
-	if ((width < 0) || (height < 0))
+	if (m[k] == NULL)
 	{
-		return (NULL);
+		free(m);
+		for (z = 0; z <= k; z++)
+		{
+			free(m[z]);
+		}
+
+	}
 	}
 	for (i = 0; i < width; i++)
 	{
@@ -46,6 +55,4 @@ int **alloc_grid(int width, int height)
 	free(m);*/
 	
 return (m);
-free (m);
-
-	}
+}
