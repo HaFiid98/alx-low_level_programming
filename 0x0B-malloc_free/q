@@ -3,44 +3,21 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid - prints a grid of integers
- * @width: width of the grid
- *
- * @height: height of the grid *
- * Return: null if failure
+ * free_grid -free 2 dimensialn grid
+ * @height: height of the grid
+ * @grid: it the grid lmao
+ * Return: Nothing.
  */
-int **alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 {
-	int k, z, i, j;
-	int **m = (int **)malloc(sizeof(int *) * height);
-	
-	if (m == NULL)
+	int m;
+	if (grid == NULL)
 	{
-		return (0);
+		free(grid);
 	}
-	if ((width <= 0) && (height <= 0))
+	free(grid);
+	for (m = 0; m <= height; m++)
 	{
-		return (NULL);
+		free(grid[m]);
 	}
-	for (k = 0; k < height; k++)
-	{
-		m[k] = (int *)malloc(sizeof(int) * width);
-	if (m[k] == NULL)
-	{
-		free(m);
-		for (z = 0; z <= k; z++)
-		{
-			free(m[z]);
-		}
-
-	}
-	}
-	for (i = 0; i < height; i++)
-	{
-		for (j = 0; j < height; j++)
-		{
-			m[i][j] = 0;
-		}
-	}
-	return (m);
 }
