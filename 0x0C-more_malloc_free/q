@@ -1,14 +1,14 @@
 #include<stdio.h>
-#include<stdlin.h>
+#include<stdlib.h>
 #include"main.h"
 /**
  * *malloc_checked - aloocate meme using mall
  *
  * @b: the size
  *
- * @Return: a pointer
+ * Return: a pointer
  */
- void *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *p = malloc(sizeof(b));
 
@@ -16,5 +16,5 @@
 	{
 		exit(98);
 	}
-	return(p);
+	return (p);
 }

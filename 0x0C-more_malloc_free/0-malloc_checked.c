@@ -6,15 +6,16 @@
  *
  * @b: the size
  *
- * @Return: a pointer
+ * Return: a pointer
  */
- void *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
-	void *p = malloc(sizeof(b));
+	void *p = malloc(sizeof(unsigned int) * b);
 
 	if (p == NULL)
 	{
 		exit(98);
 	}
-	return(p);
+	return (p);
+	free (p);
 }
