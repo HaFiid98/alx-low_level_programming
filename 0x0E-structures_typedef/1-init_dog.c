@@ -1,8 +1,8 @@
 #include"dog.h"
 #include<stdlib.h>
 /**
- * int_dog - init new dog
- * @d: potner to struct dog;
+ * init_dog - init new dog
+ * @d: potner to struct dog
  * @name:name
  * @age:age
  * @owner:ow
