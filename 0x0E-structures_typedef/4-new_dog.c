@@ -22,7 +22,7 @@ if ((name == NULL) || (owner == NULL))
 dogo = malloc(sizeof(dog_t));
 if (dogo == NULL)
 {
-	return (0);
+	return (NULL);
 }
 
 dogo->name = malloc(sizeof(char) * l1 + 1);
@@ -30,13 +30,12 @@ dogo->owner = malloc(sizeof(char) * l2 + 1);
 if (dogo->name == NULL)
 {
 	free(dogo);
-	free(dogo->name);
 	return (NULL);
 }
 if (dogo->owner == NULL)
 {
 	free(dogo);
-	free(dogo->owner);
+	free(dogo->name);
 	return (NULL);
 }
 _strcpy(dogo->name, name);
