@@ -8,14 +8,14 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list pr;
-	unsigned int i, x;
+	unsigned int i;
+	int x;
 
 	va_start(pr, n);
-
 		for (i = 0; i < n; i++)
 		{
 		x = va_arg(pr, int);
-		if (separator)
+		if (separator != NULL)
 		{
 		printf("%d", x);
 		if (!(i == n - 1))
