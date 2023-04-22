@@ -4,10 +4,10 @@
  * print_name - print name
  *
  * @name: name
- * @*f : another function
+ * @f : another function
  * Return: nonne
  */
- void print_name(char *name, void (*f)(char *))
+void print_name(char *name, void (*f)(char *))
 {
 	f(name);
 }
