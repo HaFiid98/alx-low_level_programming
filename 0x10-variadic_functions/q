@@ -1,32 +1,28 @@
-#include"variadic_functions.h"
+#ifndef _VARIADIC_FUNCTIONS_H_
+#define _VARIADIC_FUNCTIONS_H_
+
+#include <stdio.h>
+#include <stdarg.h>
+
+int sum_them_all(const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
+int _putchar(char c);
 /**
- * print_numbers - pritn numbers
- * @separator: sepa
- * @n: number
- * Return: nnone
+ * struct p - checker struct
+ * @p: possibility
+ * @f: Function to be used
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+typedef struct p
 {
-	va_list pr;
-	unsigned int i;
-	int x;
+  char *p;
+  void (*f)(va_list);
+} checker;
 
-	va_start(pr, n);
+void print_c(va_list);
+void print_i(va_list);
+void print_f(va_list);
+void print_s(va_list);
 
-		for (i = 0; i < n; i++)
-		{
-		x = va_arg(pr, int);
-		if (separator != NULL)
-		{
-		printf("%d", x);
-		if (!(i == n - 1))
-			printf("%s", separator);
-		}
-		else
-		{
-			printf("%d", x);
-		}
-		}
-		va_end(pr);	
-	printf("\n");
-}
+#endif
