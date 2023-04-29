@@ -1,16 +1,17 @@
 #include"dog.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * free_dog - free dog
+ * free_dog - free the dog
  * @d: input
- * Return: does not
+ * @Return: none
  */
 void free_dog(dog_t *d)
 {
 	if (d)
 	{
-		free(d);
-		free(d->name);
 		free(d->owner);
-		free(d->age);
+		free(d->name);
+		free(d);
 	}
 }
