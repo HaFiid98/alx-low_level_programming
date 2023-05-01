@@ -3,6 +3,7 @@
  * add_nodeint_end - add node ath the end
  * @h: input
  * @n: integer
+ * Retrun: listint
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -20,9 +21,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (l);
 	}
 	while (k->next != NULL)
-	{
 		k = k->next;
-	}
 	k->next = l;
 	return (l);
 }
