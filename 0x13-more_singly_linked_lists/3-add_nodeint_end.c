@@ -1,9 +1,9 @@
 #include"lists.h"
 /**
  * add_nodeint_end - add node ath the end
- * @h: input
+ * @head: input
  * @n: integer
- * Retrun: listint
+ * Return: listint
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
