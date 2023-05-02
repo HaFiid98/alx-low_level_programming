@@ -14,7 +14,7 @@ int wc(char *s)
 	c = 0;
 	for (b = 0; s[b] != '\0'; b++)
 	{
-		i f(s[b] == ' ')
+		if (s[b] == ' ')
 			a = 0;
 		else if (a == 0)
 		{
