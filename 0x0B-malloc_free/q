@@ -1,7 +1,7 @@
 #include"main.h"
 #include"stdlib.h"
 /**
- * argstostr - cocncrete all 
+ * argstostr - cocncrete all
  * @ac: argument count
  * @av: poibter to array size
  * Return: return
@@ -15,14 +15,12 @@ char *argstostr(int ac, char **av)
 	size = 0;
 	c = 0;
 	if (av == NULL || av == 0)
-	{
 		return (NULL);
-	}
 	a = 0;
 	while (a < ac)
 	{
 		b = 0;
-		while(av[a][b])
+		while (av[a][b])
 		{
 			size++;
 			b++;
@@ -49,3 +47,4 @@ char *argstostr(int ac, char **av)
 	}
 	argg[c] = '\0';
 	return (argg);
+}
