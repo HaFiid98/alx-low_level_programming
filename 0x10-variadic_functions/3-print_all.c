@@ -7,12 +7,12 @@ void print_all(const char * const format, ...)
 {
 	int a = 0;
 	char *s, *sp = "";
-
 	va_list ls;
+
 	va_start(ls, format);
 	if (format)
 	{
-		while(format[a])
+		while (format[a])
 		{
 			switch (format[a])
 			{
@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				a++;
 				continue;
 		}
-			sp = "; ";
+			sp = ", ";
 			a++;
 		}
 	}
