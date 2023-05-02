@@ -1,17 +1,16 @@
 #include"lists.h"
 /**
- * free_listint - free listint
+ * free_listint - free list
  * @head: input
- * Return: npne
  */
 void free_listint(listint_t *head)
 {
-	listint_t *k;
+	listint_t *r;
 
 	while (head)
 	{
-		k = head;
+		r = head;
 		head = head->next;
-		free(k);
+		free(r);
 	}
 }
