@@ -6,7 +6,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int ar[11] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024};
+unsigned int ar[12] = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048};
 unsigned int r = 0;
 int i;
 int coun = 0;
